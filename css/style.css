@@ -421,6 +421,7 @@ img.svg{
 	border: 8px solid rgba(255,255,255,.5);
 }
 .arlo_tm_hero_header_wrap .name_holder h3{
+	padding-top: 0.4em;
 	font-family: "Montserrat";
 	text-transform: uppercase;
 	color: #fff;
@@ -2617,6 +2618,11 @@ i.fab {
    
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+.short_info_wrap .fab {
+
+	font-size: 1.5em;
 }
 
 i.fas {
