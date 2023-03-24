@@ -1,4 +1,4 @@
-const { src, dest, series } = require('gulp');
+const { series } = require('gulp');
 var exec = require('child_process').exec;
 
 
@@ -10,10 +10,10 @@ function buildSite(cb) {
     });
 }
 
-function createRelease(cb) {
-    src(['public/*.html', 'public/*.js'])
-        .pipe(dest('dist'));
-    cb();
-}
+// function createRelease(cb) {
+//     src(['public/*.html', 'public/*.js'])
+//         .pipe(dest('dist'));
+//     cb();
+// }
   
-exports.default = series(buildSite, createRelease);
+exports.default = series(buildSite);
