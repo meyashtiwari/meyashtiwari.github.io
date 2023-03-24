@@ -11,7 +11,7 @@ function buildSite(cb) {
 }
 
 function createRelease(cb) {
-    src('public/*.html')
+    src(['public/*.html', 'public/*.js'])
         .pipe(dest('dist'));
     cb();
 }
