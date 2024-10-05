@@ -1,9 +1,8 @@
-const { series } = require('gulp');
-var exec = require('child_process').exec;
-
+import { series } from 'gulp';
+import { exec } from 'child_process';
 
 function buildSite(cb) {
-    exec('npm run build', function (err, stdout, stderr) {
+    exec('bun run build', function (err, stdout, stderr) {
         console.log(stdout);
         console.log(stderr);
         cb(err);
@@ -15,5 +14,5 @@ function buildSite(cb) {
 //         .pipe(dest('dist'));
 //     cb();
 // }
-  
-exports.default = series(buildSite);
+
+export default series(buildSite);
